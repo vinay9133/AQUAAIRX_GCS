@@ -1,0 +1,59 @@
+.mavlinkstatus-parent{
+    
+    background-color: #93CFF1;
+}
+.mavlinkstatus-child{
+    display: flex;
+}
+.mavlink-status1{
+    background-color: #93CFF1;
+}
+
+.groundstation1{
+    width: 100%;
+    margin-top: 3rem;
+    height: 3rem;
+}
+
+.savedlogfiles1{
+    width: 100%;
+}
+
+.groundstation1:hover{
+    background-color: #93CFF1;
+}
+
+.savedlogfiles1:hover{
+    background-color: #93CFF1;
+}
+h1{
+    margin-left: 15rem;
+}
+.mavlink-child{
+    background-color: #004C82;
+    height: 100%;
+    width: 60%;
+    margin: 3rem;
+    padding: 30px;
+    justify-items: center;
+    align-items: center;
+    color: white;
+}
+
+.message-parent{
+    display: flex;
+    justify-content: center;
+}
+
+.messages{
+    width: 60%;
+}
+
+span{
+    display: flex;
+    justify-content: space-between;
+}
+.message-parent span h4{
+    display: inline-block;
+    
+}

@@ -1,0 +1,38 @@
+
+.text{
+    color: white;
+    background-color: #004c82;
+    border: transparent;
+}
+.cards-container {
+    align-items: center;
+    justify-content: fill;
+    padding: 20px;
+  }
+  .download {
+    color: #004c82;
+    border: none;
+    background-color: transparent;
+    cursor: Pointer;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  
+  .upload {
+    color: #004c82;
+    border: none;
+    background-color: transparent;
+    cursor: Pointer;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  
+  .setup-cards:hover {
+    box-shadow: 0 0px 60px rgba(0, 0, 0, 0.5);
+  }
+  .carddesc{
+    color: #004c82;
+    border-top: 5px solid #004c82;
+    height: 8rem;
+  }
+  

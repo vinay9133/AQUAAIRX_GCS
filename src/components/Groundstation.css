@@ -1,0 +1,93 @@
+
+.groundstation-parent{
+    
+    background-color: #93CFF1;
+}
+.groundstation-child{
+    display: flex;
+}
+.groundstation{
+    background-color: #93CFF1;
+    width: 100%;
+    margin-top: 3rem;
+    height: 3rem;
+}
+
+.groundstation-content{
+    background-color: #004C82;
+    height: 100%;
+    width: 60%;
+    margin: 3rem;
+    padding: 30px;
+    justify-items: center;
+    align-items: center;
+    color: white;
+}
+.mavlink-status{
+    width: 100%;
+}
+.mavlink-status:hover{
+    background-color: #93CFF1;
+}
+
+.savedlogfiles{
+    width: 100%;
+}
+
+.savedlogfiles:hover{
+    background-color: #93CFF1;
+}
+.wrapper{
+    margin-left: 25%;
+}
+.check{
+    margin-bottom: 10px;
+}
+span{
+    display: flex;
+    font-size: 1rem;
+}
+.system-id{
+    display: flex;
+}
+
+#mav{
+    margin-right: 1rem;
+}
+.emit{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.protocol{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.forwarding{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox1{
+    display: flex;
+    height: 15px;
+    width: 20px;
+}
+.hostname{
+    display: flex;
+    position: relative;
+    left: 0.45rem
+}
+.local{
+    margin-left: 1rem;
+    height: 1.5rem;
+}
+h4{
+    margin-top: 0.5rem;
+    color: red;
+    opacity: 80%;
+}

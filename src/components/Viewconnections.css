@@ -1,0 +1,224 @@
+.view-connections-parent {
+    
+    background-color: #93CFF1;
+  }
+
+.view-connections-child{
+  display: flex;
+}
+h1{
+  font-size: 1rem;
+  margin-left: 50px;
+}
+
+
+  .connections-list {
+    display: flex;
+    
+  }
+  .connection-item {
+    background-image: linear-gradient(to right, rgb(0,76,130,0.5), rgba(0,16,28,0.5)) ;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-left: 3rem;
+    width: 32vw;
+  }
+  
+.connection-item h2 {
+    margin-top: 0;
+  }
+.btn-list{
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+.Btn1 {
+width: 90px;
+height: 35px;
+border: none;
+border-radius: 10px;
+background: linear-gradient(to right,#0a5577,#238ac5,#7decff,#80ccff,#72a4ff,#0cf4fc);
+background-size: 250%;
+background-position: left;
+color: #004C82;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition-duration: 1s;
+overflow: hidden;
+}
+.Btn1::before {
+  position: absolute;
+  content: "EDIT";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color:#004C82;
+  background-size: 200%;
+}
+
+.Btn1:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn1:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn1:active {
+  transform: scale(0.95);
+}
+
+
+
+.Btn2 {
+width: 90px;
+height: 35px;
+border: none;
+border-radius: 10px;
+background: linear-gradient(to right,#0a5577,#238ac5,#7decff,#80ccff,#72a4ff,#0cf4fc);
+background-size: 250%;
+background-position: left;
+color: #004C82;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition-duration: 1s;
+overflow: hidden;
+}
+.Btn2::before {
+position: absolute;
+content: "DELETE";
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 97%;
+height: 90%;
+border-radius: 8px;
+transition-duration: 1s;
+background-color: #004C82;
+background-size: 200%;
+}
+
+.Btn2:hover {
+background-position: right;
+transition-duration: 1s;
+}
+
+.Btn2:hover::before {
+background-position: right;
+transition-duration: 1s;
+}
+
+.Btn2:active {
+transform: scale(0.95);
+}
+
+  
+.Btn3 {
+width: 90px;
+height: 35px;
+border: none;
+border-radius: 10px;
+background: linear-gradient(to right,#0a5577,#238ac5,#7decff,#80ccff,#72a4ff,#0cf4fc);
+background-size: 250%;
+background-position: left;
+color: #004C82;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition-duration: 1s;
+overflow: hidden;
+}
+
+.Btn3::before {
+position: absolute;
+content: "CONNECT";
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 97%;
+height: 90%;
+border-radius: 8px;
+transition-duration: 1s;
+background-color: #004C82;
+background-size: 200%;
+}
+
+.Btn3:hover {
+background-position: right;
+transition-duration: 1s;
+}
+
+.Btn3:hover::before {
+background-position: right;
+transition-duration: 1s;
+}
+
+.Btn3:active {
+transform: scale(0.95);
+}
+
+  
+.Btn4 {
+  width: 140px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#0a5577,#238ac5,#7decff,#80ccff,#72a4ff,#0cf4fc);
+  background-size: 250%;
+  background-position: left;
+  color: #004C82;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  }
+  .Btn4::before {
+    position: absolute;
+    content: "DISCONNECT";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: #004C82;
+    background-size: 200%;
+  }
+  
+  .Btn4:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .Btn4:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .Btn4:active {
+    transform: scale(0.95);
+  }

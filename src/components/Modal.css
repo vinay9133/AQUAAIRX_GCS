@@ -1,0 +1,107 @@
+/* Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  
+  .modal-content {
+    background: rgb(0, 76, 130);
+    opacity: 70%;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .square-box {
+    width: 220px;
+    height: 220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .square-button {
+    background-color: #5497D7;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .screw{
+    position: relative;
+    left: 7px;
+    font-size: 1.5rem; 
+  }
+  .setup{
+    position: relative;
+    top: 5px;
+    right: 1px;
+  }
+
+  .notes{
+    position: relative;
+    top: 10px;
+    left: 30px;
+    font-size: 1.5rem; 
+  }
+
+  .tools{
+    position: relative;
+    top: 14px;
+    right: 1px;
+  }
+  .set{
+    position: relative;
+    left: 7px;
+    font-size: 1.5rem; 
+  }
+  .config{
+    position: relative;
+    top: 5px;
+    right: 1px;
+  }
+  .questionmark{
+    position: relative;
+    left: 5px;
+    font-size: 1.5rem;
+  }
+  .help{
+    position: relative;
+    top: 5px;
+    left: 2px;
+  }
+
+  .square-button:hover {
+    transform: translateY(-3px);
+  }
+  

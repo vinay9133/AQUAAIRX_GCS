@@ -1,0 +1,188 @@
+
+.add-parent {
+    
+    min-height: 100vh;
+    background-color: #93CFF1; 
+}
+
+.add-parent-child{
+    display: flex;
+}
+.add-box {
+    background-color: #004C82;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 2rem;
+    height: 113vh;
+    margin-left: 5rem;
+    box-sizing: border-box;
+}
+
+h3{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+.name {
+    display: flex;
+    font-size: 1rem;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 5px;
+    flex-direction: column;
+}
+
+.name-input {
+    width: 100%;
+    height: 1.5rem;
+    font-size: 1rem;
+}
+.error{
+    height: 3rem;
+    color: red;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 2px;
+}
+.check-option1, .check-option2, .check-option3, .check-option4 {
+    margin-top: 0rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.acs {
+    font-size: 1.5rem;
+}
+
+.checkbox, .checkbox3, .checkbox4 {
+    margin-top: 0.5rem;
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+}
+
+.dropdown-type, .port-dropdown, .baud-dropdown, .parity-dropdown, .data-dropdown, .stop-dropdown {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.type-dropdown select, .port-dropdown select, .baud-dropdown select, .parity-dropdown select, .data-dropdown select, .stop-dropdown select {
+    font-size: 1.5rem; /* Increase font size */
+    padding: 0.34rem; /* Add padding for better alignment */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.save {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ok, .cancel {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 1rem;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.ok::before, .cancel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #5497D7;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.ok:hover, .cancel:hover {
+    color: #e8e8e8;
+}
+
+.ok:hover::before, .cancel:hover::before {
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .name {
+        flex-direction: row;
+    }
+
+    .name-input {
+        margin-left: 1rem;
+        width: 90%;
+    }
+
+    .acs {
+        font-size: 1rem;
+    }
+
+    .checkbox, .checkbox3, .checkbox4 {
+        height: 15px;
+        width: 15px;
+    }
+
+    .dropdown-type, .port-dropdown, .baud-dropdown, .parity-dropdown, .data-dropdown, .stop-dropdown {
+        font-size: 1rem;
+    }
+
+    .type-dropdown select, .port-dropdown select, .baud-dropdown select, .parity-dropdown select, .data-dropdown select, .stop-dropdown select {
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .save {
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .ok, .cancel {
+        padding: 12px 25px;
+        font-size: 10px;
+    }
+
+    .ok::before, .cancel::before {
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1rem;
+    }
+
+    .acs {
+        font-size: 1rem;
+    }
+
+    .dropdown-type, .port-dropdown, .baud-dropdown, .parity-dropdown, .data-dropdown, .stop-dropdown {
+        font-size: 5rem;
+    }
+
+    .type-dropdown select, .port-dropdown select, .baud-dropdown select, .parity-dropdown select, .data-dropdown select, .stop-dropdown select {
+        font-size: 1.5rem;
+    }
+}

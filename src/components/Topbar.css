@@ -1,0 +1,30 @@
+.topbar-parent {
+    display: flex;
+    height: 7vh;
+    background-color: #004C82;
+    color: white;
+    justify-items: center;
+    align-items: center;
+}
+
+.aquaairx {
+    font-family: 'Aqua AirX', sans-serif;
+    margin: 0.5rem;
+}
+
+#squares, #settings {
+    color: #65A9E0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+#settings {
+    font-size: 1.3rem;
+}
+
+#squares:hover, #settings:hover {
+    transform: translateY(-3px);
+}

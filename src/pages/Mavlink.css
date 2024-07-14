@@ -1,0 +1,31 @@
+.mavlink-parent{
+    background-color: #93CFF1;
+    display: flex; 
+}
+
+.sidebarsec-options{
+    background-color: #5497D7;
+    margin-top:0rem;
+    height: 120vh;
+    width: 12%;
+    color: white;
+    font-size: 1rem;
+}
+
+.groundstation{
+    width: 100%;
+    margin-top: 3rem;
+    height: 3rem;
+}
+
+.mavlink-status1{
+    width: 100%;
+}
+
+.groundstation:hover{
+    background-color: #93CFF1;
+}
+
+.mavlink-status1:hover{
+    background-color: #93CFF1;
+}
