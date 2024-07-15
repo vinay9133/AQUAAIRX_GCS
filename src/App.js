@@ -14,6 +14,10 @@ import General from './pages/General';
 import Console from './pages/Console';
 import Homepage from './pages/Homepage';
 import Setup from './pages/Setup'
+import Help from './pages/Help'
+import Plan from './pages/Waypointplan'
+import Waypointplan from './pages/Waypointplan';
+
 
 
 function App() {
@@ -50,6 +54,8 @@ function App() {
           <Route path='/mavlinkstatus' element={<Mavlinkstatus />} />
           <Route path='/savedlogfiles' element={<Savedlogfiles />} />
           <Route path='/setup'  element={<Setup />}/>
+          <Route path='/help' element={<Help />}/>
+          <Route path='/plan' element={<Waypointplan />} />
         </Routes>
       </div>
     </Router>

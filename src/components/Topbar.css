@@ -12,7 +12,7 @@
     margin: 0.5rem;
 }
 
-#squares, #settings {
+#squares, #settings, #mapview {
     color: #65A9E0;
     font-size: 1.5rem;
     cursor: pointer;
@@ -25,6 +25,9 @@
     font-size: 1.3rem;
 }
 
-#squares:hover, #settings:hover {
+#mapview{
+    font-size: 1.3rem;
+}
+#mapview:hover,#squares:hover, #settings:hover {
     transform: translateY(-3px);
 }

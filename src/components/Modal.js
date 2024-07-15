@@ -20,7 +20,7 @@ function Modal({ isOpen, onClose }) {
           <button className="square-button" onClick={() => navigate('/setup')}><FaScrewdriverWrench className='screw'/><span className='setup'>Setup</span></button>
           <button className="square-button"><GrNotes className='notes'/><span className='tools'>Analyze Tools</span></button>
           <button className="square-button"><GrDocumentConfig className='set' /><span className='config'>Config</span></button>
-          <button className="square-button"><MdHelp className='questionmark'/><span className='help'>Help</span></button>
+          <button className="square-button" onClick={() => navigate('/help')}> <MdHelp className='questionmark'/> <span className='help'>Help</span> </button>
         </div>
       </div>
     </div>

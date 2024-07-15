@@ -1,0 +1,196 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 93vh;
+  }
+  
+  .fly-options {
+    position: absolute;
+    top: 48px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .card {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+  
+  .symbol {
+    fill: #333;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .label {
+    position: absolute;
+    bottom: -15px;
+    font-size: 10px;
+    color: #000;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .card.plan:hover {
+    background-color: #0077b5;
+  }
+  
+  .card.plan:hover .symbol {
+    fill: white;
+  }
+  
+  .card.return:hover {
+    background-color: #ff5722;
+  }
+  
+  .card.return:hover .symbol {
+    fill: white;
+  }
+  
+  .card.video:hover {
+    background-color: #004C82;
+  }
+  
+  .card.video:hover .symbol {
+    fill: white;
+  }
+  
+  .card.clear:hover {
+    background-color: #f44336;
+  }
+  
+  .card.clear:hover .symbol {
+    fill: white;
+  }
+  
+  .card.takeoff:hover {
+    background-color: #4caf50;
+  }
+  
+  .card.takeoff:hover .symbol {
+    fill: white;
+  }
+  
+  .circle-controls {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .circle-card {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+  
+  .circle-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .circle-card.mark:hover {
+    background-color: #0077b5;
+  }
+  
+  .circle-card.mark:hover .symbol {
+    fill: white;
+  }
+  
+  .circle-card.remove:hover {
+    background-color: #ff5722;
+  }
+  
+  .circle-card.remove:hover .symbol {
+    fill: white;
+  }
+  
+  .circle-card.clear:hover {
+    background-color: #f44336;
+  }
+  
+  .circle-card.clear:hover .symbol {
+    fill: white;
+  }
+  
+  .circle-card.takeoff:hover {
+    background-color: #4caf50;
+  }
+  
+  .circle-card.takeoff:hover .symbol {
+    fill: white;
+  }
+  
+  .circle-card .symbol {
+    fill: #333;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .circle-card .label {
+    position: absolute;
+    bottom: -15px;
+    font-size: 10px;
+    color: #333;
+  }
+  
+  .waypoint-table {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .waypoint-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .waypoint-table th, .waypoint-table td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .waypoint-table th {
+    background-color: #f2f2f2;
+  }
+  

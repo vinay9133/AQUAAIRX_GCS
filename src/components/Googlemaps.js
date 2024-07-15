@@ -3,10 +3,13 @@ import { MapContainer, TileLayer, Marker, Polyline, useMapEvents, Popup } from '
 import L from 'leaflet';
 import SonarView from '../SonarView';
 import 'leaflet/dist/leaflet.css';
-import { FaMapMarkerAlt, FaUndo, FaTrash, FaFlag, FaRoute } from 'react-icons/fa';
+import { FaRoute } from 'react-icons/fa';
 import { BsRocketTakeoffFill, BsFillCameraReelsFill } from 'react-icons/bs';
 import { PiAirplaneLandingFill } from 'react-icons/pi';
+import { LiaTachometerAltSolid } from "react-icons/lia";
+import { GiRadarSweep } from "react-icons/gi";
 import './GoogleMaps.css';
+import { useNavigate } from 'react-router-dom';
 
 const droneIcon = new L.Icon({
   iconUrl: 'https://cdn.icon-icons.com/icons2/1738/PNG/512/iconfinder-technologymachineelectronicdevice06-4026454_113332.png',
@@ -28,6 +31,7 @@ const Googlemaps = () => {
   const [waypoints, setWaypoints] = useState([]);
   const [currentWaypointIndex, setCurrentWaypointIndex] = useState(0);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const [isRadarVisible, setIsRadarVisible] = useState(false);
   const [stream, setStream] = useState(null);
   const videoRef = useRef(null);
 
@@ -72,18 +76,6 @@ const Googlemaps = () => {
     return null;
   };
 
-  const clearWaypoints = () => {
-    setMarkers([]);
-    setWaypoints([]);
-    setPath([]);
-    setCurrentWaypointIndex(0);
-  };
-
-  const removeLastWaypoint = () => {
-    setMarkers(markers.slice(0, -1));
-    setWaypoints(waypoints.slice(0, -1));
-  };
-
   const handleReturnClick = () => {
     const confirmed = window.confirm('Are you sure you want to come back to Home?');
     if (confirmed) {
@@ -114,12 +106,17 @@ const Googlemaps = () => {
     }
   };
 
+  const handleRadarClick = () => {
+    setIsRadarVisible(!isRadarVisible);
+  };
+
+  const navigate = useNavigate();
+
   return (
     <div className="map-container">
-      <MapContainer center={dronePosition} zoom={15} style={{ width: '100%', height: '100%' }}>
+      <MapContainer id="map" center={dronePosition} zoom={15} style={{ width: '100%', height: '100%' }}>
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         <Marker position={dronePosition} icon={droneIcon} />
         <Polyline positions={path} color="blue" />
         {markers.map((marker, index) => (
@@ -130,15 +127,17 @@ const Googlemaps = () => {
         {showPlan && <PlanButton />}
         <Polyline positions={waypoints} color="red" />
       </MapContainer>
-      <div className="sonar">
-        <SonarView />
-      </div>
+      {isRadarVisible && (
+        <div className="sonar">
+          <SonarView />
+        </div>
+      )}
       <div className="right-options">
         <button className="card return" onClick={handleReturnClick}>
           <PiAirplaneLandingFill className="symbol" />
           <span className="label">Return</span>
         </button>
-        <button className="card plan" onClick={() => setShowPlan(!showPlan)}>
+        <button className="card plan" onClick={() => navigate('/plan')}>
           <FaRoute className="symbol" />
           <span className="label">Plan</span>
         </button>
@@ -148,32 +147,20 @@ const Googlemaps = () => {
         </button>
         <button className="card video" onClick={handleVideoClick}>
           <BsFillCameraReelsFill className="symbol" />
-          <span className="label">Live</span>
+          <span className="label">Live</span> 
         </button>
-        {showPlan && (
-          <div className="circle-controls">
-            <button className="circle-card mark" onClick={() => setShowPlan(true)}>
-              <FaMapMarkerAlt className="symbol" />
-              <span className="label">Mark</span>
-            </button>
-            <button className="circle-card remove" onClick={removeLastWaypoint}>
-              <FaUndo className="symbol" />
-              <span className="label">Remove</span>
-            </button>
-            <button className="circle-card clear" onClick={clearWaypoints}>
-              <FaTrash className="symbol" />
-              <span className="label">Clear</span>
-            </button>
-            <button className="circle-card takeoff" onClick={() => { setCurrentWaypointIndex(0); setIsMoving(true); }}>
-              <FaFlag className="symbol" />
-              <span className="label">Take Off</span>
-            </button>
-          </div>
-        )}
+        <button className="card radar" onClick={handleRadarClick}>
+          <GiRadarSweep className="symbol" />
+          <span className="label">Radar</span>
+        </button>
+        <button className="card meter">
+          <LiaTachometerAltSolid className="symbol" />
+          <span className="label">Metrics</span>
+        </button>
       </div>
       {isVideoVisible && (
         <div className="video-overlay">
-          <video ref={videoRef} width="100%"  autoPlay muted></video>
+          <video ref={videoRef} width="100%" autoPlay muted></video>
         </div>
       )}
     </div>
