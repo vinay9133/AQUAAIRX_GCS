@@ -168,18 +168,23 @@ function Waypointplan() {
               </tr>
             </thead>
             <tbody>
-              {waypoints.map((waypoint, index) => (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{waypoint[0]}</td>
-                  <td>{waypoint[1]}</td>
-                  <td>{(dronePosition[2] || 0).toFixed(2)}</td>
-                  <td>{(calculateDistance(initialPosition[0], initialPosition[1], waypoint[0], waypoint[1])).toFixed(2)}</td>
-                  <td>
-                    <button onClick={() => removeWaypoint(index)}>X</button>
-                  </td>
-                </tr>
-              ))}
+              {waypoints.map((waypoint, index) => {
+                const distance = index === 0
+                  ? calculateDistance(initialPosition[0], initialPosition[1], waypoint[0], waypoint[1])
+                  : calculateDistance(waypoints[index - 1][0], waypoints[index - 1][1], waypoint[0], waypoint[1]);
+                return (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{waypoint[0]}</td>
+                    <td>{waypoint[1]}</td>
+                    <td>{(dronePosition[2] || 0).toFixed(2)}</td>
+                    <td>{distance.toFixed(2)}</td>
+                    <td>
+                      <button onClick={() => removeWaypoint(index)}>X</button>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
