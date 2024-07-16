@@ -25,7 +25,7 @@ function ViewConnections({ connections, deleteConnection }) {
     <Sidebarone />
     <Sidebarsecond />
     <div className='view-connnection-box'>
-      <h1>View Connections</h1>
+    
       {connections.length === 0 ? (
         <p id=''>No connections available</p>) :
         (<div className='connections-list'>

@@ -129,3 +129,23 @@
     top: 53%;
     width: 24%;
   }
+
+  .metrics{
+    z-index:1001;
+    position: absolute;
+    bottom: 0px;
+    left: 40%;
+    width: 360px;
+    height: 25%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,120px);
+    grid-auto-rows: 60px;
+  }
+
+  .metrics-child{
+    border: 1px solid #004C82;
+    justify-content: start;
+    align-items: center;
+    font-size: 2rem;
+    padding: 5px;
+  }
