@@ -1,0 +1,32 @@
+/* .mainpageside-parent{
+    border: 2px solid red;
+    position: fixed;
+    top: 7vh;
+    right: 10px;
+    width: 20%;
+    height: 93vh;
+    z-index: 1001;
+}
+
+.sonar{
+    position: absolute;
+    bottom: 40%;
+    width: 20%;
+    height: 35vh;
+    right:10px;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00487c;
+    opacity: 90%;
+  }
+
+  .video-overlay{
+    border: 1px solid green;
+    z-index: 1001;
+    position: absolute;
+    bottom: 5px;
+    right:10px;
+    width: 20%;
+  } */

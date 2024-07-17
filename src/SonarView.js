@@ -22,8 +22,8 @@ const SonarView = () => {
   }, []);
 
   const drawSonarRadar = (data) => {
-    const width = 200;
-    const height = 200;
+    const width = 150;
+    const height = 150;
     const svg = d3.select('#sonarRadar')
                   .attr('width', width)
                   .attr('height', height);
@@ -91,7 +91,7 @@ const SonarView = () => {
   };
 
   const rScale = d3.scaleLinear()
-                   .range([0, Math.min(200, 200) / 2])
+                   .range([0, Math.min(150,150) / 2])
                    .domain([0, 100]);
 
   if (!data) return <div>Loading...</div>;
