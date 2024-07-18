@@ -3,6 +3,22 @@
     width: 100%;
     height: 93vh;
   }
+  .card {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
   
   .right-options {
     position: absolute;
@@ -93,8 +109,8 @@
   }
   .sonar{
     position: absolute;
-    bottom: 32%;
-    width: 15%;
+    bottom: 35%;
+    width: 18%;
     height: 30vh;
     right:10px;
     z-index: 1000;
@@ -109,6 +125,6 @@
     position: absolute;
     bottom: 5px;
     right:10px;
-    width: 15%;
+    width: 18%;
   }
 
